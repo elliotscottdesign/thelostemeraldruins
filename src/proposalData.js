@@ -31,8 +31,12 @@ Inspired by the mystery of forgotten jungle ruins, players will navigate a serie
 Each section of the course feels like part of a lost expedition, encouraging guests to explore deeper into the ruins as they uncover secrets, conquer challenges and compete for the ultimate treasure: victory.
 
 Combining cinematic theming with proven gameplay mechanics developed through years of experience in immersive golf design — Adventure Lies Within.`,
-  gallery: [deck(2), deck(3)],
+  // page-02 is reserved for the access/landing screen.
+  gallery: [deck(3)],
 }
+
+// Image shown centered on the code-entry landing page.
+export const LANDING_IMAGE = deck(2)
 
 export const VENUE = {
   heading: 'Venue & Floor Plan',
