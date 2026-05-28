@@ -1,0 +1,108 @@
+:root {
+  /* Backgrounds — deep jungle / temple stone */
+  --ink: #0c1410;
+  --ink-2: #11201a;
+  --ink-3: #1a2c24;
+  /* Accents — emerald + gold */
+  --emerald: #1f9d6b;
+  --emerald-light: #34d399;
+  --emerald-dim: #15543b;
+  --gold: #c9a24b;
+  --gold-light: #e4c878;
+  /* Text */
+  --cream: #f3ede0;
+  --cream-dim: #b6b0a1;
+  --line: rgba(201, 162, 75, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--ink);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+}
+
+.serif {
+  font-family: 'Cinzel', Georgia, serif;
+  letter-spacing: 0.02em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Gold hairline rule */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border: 0;
+  opacity: 0.5;
+}
+
+/* Cards */
+.card {
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.tab-label {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--emerald-dim);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+
+/* Fade-in for tab content */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeUp 0.35s ease both;
+}
